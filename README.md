@@ -43,3 +43,8 @@ Quando for realizado o teste unitário dessa funcionalidade, não será necessá
 Quando for realizado um testes E2E(ponta a ponta), esse teste precisa ser muito próximo a experiência que um usuário vai ter operando na aplicação, necessita ser igual. Nesse tipo de deste não é aconselhável ter mocks ou dados fakes porque o teste E2E precisa simular um usuário trabalhando(executando) na aplicação.
 
 </LINKEDIN>
+
+Utilizando o Pattern chamado In Memory database
+que é nada mais do que um banco de dados que vai rodar na memória sem tocar no
+disco, que é criado no processo de start da aplicação e vai rodar durante os testes e depois ele é destruído quando o processo finaliza.
+[Veja mais desse pattern aqui](https://martinfowler.com/bliki/InMemoryTestDatabase.html#:~:text=An%20in%2Dmemory%20database%20is,destroyed%20when%20the%20process%20finishes.)
