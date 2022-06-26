@@ -1,3 +1,4 @@
+import { InMemoryLessonsRepository } from "../../test/repositories/InMemoryLessonsRepository";
 import { CreateLesson } from "./CreateLesson";
 
 describe('create lesson', () => {
@@ -6,9 +7,8 @@ describe('create lesson', () => {
     // PrismaLessonsRepository porque esse é um teste unitário e eu não quero
     // que ele teste outras camadas, eu quero testar somente o serviço CreateLesson
     // desacoplado de qualquer dependência que ele tenha
-    const createLesson = new CreateLesson({
-      create: async (data) => {}
-    });
+    const inMemoryLessonsRepository = new InMemoryLessonsRepository();
+    const createLesson = new CreateLesson(inMemoryLessonsRepository);
 
     // eu espero que a resolução da promise createLesson.execute não dispare
     // nenhum erro 
@@ -16,5 +16,16 @@ describe('create lesson', () => {
       .resolves
       .not
       .toThrow()
+
+    // dentro do inMemoryLessonsRepository dentro dos items salvos 
+    expect(inMemoryLessonsRepository.items).toEqual(
+      // procurando se o array de items contém um objeto 
+      expect.arrayContaining([
+        // que contém um title Nova aula
+        expect.objectContaining({
+          title: 'Nova aula'
+        })
+      ])
+    )
   });
 });
