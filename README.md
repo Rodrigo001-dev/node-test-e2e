@@ -44,6 +44,9 @@ Quando for realizado um testes E2E(ponta a ponta), esse teste precisa ser muito 
 
 </LINKEDIN>
 
+Uma das coisas que é importante cuidar quando está trabalhando com testes E2E que conectam no banco é que os testes não devem interferir entre si, é como se eu precisasse ter um banco de dados específico para cada switch(arquivo) de teste que tem na aplicação.
+E outra coisa importante é que eu não posso usar o banco de desenvolvimento, é necessário usar um banco específico para testes
+
 Utilizando o Pattern chamado In Memory database
 que é nada mais do que um banco de dados que vai rodar na memória sem tocar no
 disco, que é criado no processo de start da aplicação e vai rodar durante os testes e depois ele é destruído quando o processo finaliza.
