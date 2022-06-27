@@ -26,11 +26,11 @@ export default class PrismaTestEnvironment extends NodeEnvironment {
     const dbName = process.env.DATABASE_NAME;
 
     this.schema = `test_${crypto.randomUUID()}`;
-    // criando um banco de dados específico para uma switch de teste
+    // criando um banco de dados específico para uma suite de teste
     this.connectionString = `postgresql://${dbUser}:${dbPass}@${dbHost}:${dbPort}/${dbName}?schema=${this.schema}`;
   }
 
-  // vai rodar antes de cada switch(arquivo) de teste e2e
+  // vai rodar antes de cada suite(arquivo) de teste e2e
   async setup() {
     process.env.DATABASE_URL = this.connectionString;
     this.global.process.env.DATABASE_URL = this.connectionString;
@@ -41,7 +41,7 @@ export default class PrismaTestEnvironment extends NodeEnvironment {
     return super.setup();
   }
 
-  // vai rodar depois de cada switch(arquivo) de teste e2e
+  // vai rodar depois de cada suite(arquivo) de teste e2e
   async teardown() {
     const client = new Client({
       connectionString: this.connectionString,
