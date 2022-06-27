@@ -20,6 +20,7 @@ disco, que é criado no processo de start da aplicação e vai rodar durante os 
 <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white" alt="TypeScript"> </a>
 <a href="https://nodejs.org/en/" target="_blank"> <img src="https://img.shields.io/badge/-Node.js-32CD32?style=flat-square&logo=Node.js&logoColor=white" alt="Node.js"> </a>
 <a href="https://jestjs.io/pt-BR/" target="_blank"> <img src="https://img.shields.io/badge/-Jest-FF7800?style=flat-square&logo=jest&logoColor=white" alt="Jest"> </a>
+<a href="https://www.prisma.io/" target="_blank"> <img src="https://img.shields.io/badge/-Prisma-3368FF?style=flat-square&logo=prisma&logoColor=white" alt="Prisma"> </a>
 
 ## 💻 Autor
 
