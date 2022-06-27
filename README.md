@@ -33,10 +33,10 @@ E temos uma funcionalidade na aplicação:
 
   dentro desse fluxo temos:
 
-  1. Cadastra usuário no banco
-  2. Cadastra endereço no banco
-  3. Se comunica com gateway de pagamento para enviar a transação
-  4. Cadastra a compra no banco
+  1- Cadastra usuário no banco
+  2- Cadastra endereço no banco
+  3- Se comunica com gateway de pagamento para enviar a transação
+  4- Cadastra a compra no banco
 
 Quando for realizado o teste unitário dessa funcionalidade, não será necessário banco de dados e nem a API do Gateway, ou seja, as operações vão ser testadas sem conectar com banco de dados e sem bater no Gateway de pagamento.
 
